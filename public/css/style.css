@@ -1,0 +1,232 @@
+/* --- Pinky Petal Global Styles --- */
+:root {
+    --main-pink: #ff69b4;
+    --dark-pink: #e05297;
+    --light-pink: #fff0f6;
+    --bg-color: #fdfbfb;
+    --text-color: #444;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- Navigation Bar --- */
+nav {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--main-pink);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--main-pink);
+}
+
+/* --- Centered Auth Cards (Login/Register) --- */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.card h2 {
+    color: var(--main-pink);
+    margin-bottom: 1.5rem;
+}
+
+/* --- Form Elements --- */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--main-pink);
+}
+
+button {
+    width: 100%;
+    background-color: var(--main-pink);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--dark-pink);
+}
+
+/* --- Product Grid --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px 5%;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+}
+
+.product-card .price {
+    color: var(--main-pink);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* --- Tables (For Admin/Orders) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+table th {
+    background-color: var(--light-pink);
+    color: var(--dark-pink);
+}
+
+/* --- Dashboard Wrapper --- */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar a {
+    color: #bdc3c7;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: var(--main-pink);
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* This makes it fill the whole screen height */
+    margin: 0;
+}
+
+.sidebar {
+    width: 260px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0; /* Prevents the sidebar from getting squashed */
+}
+
+.main-content {
+    flex-grow: 1; /* This forces the content to fill the remaining screen width */
+    padding: 40px;
+    background-color: #fdfbfb;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 100%; /* Makes the card wide */
+    max-width: 1100px; /* Keeps it readable on very large screens */
+    margin-bottom: 20px;
+}
